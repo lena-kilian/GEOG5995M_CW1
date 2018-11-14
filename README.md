@@ -5,7 +5,7 @@ This model is part of an [assessment](http://www.geog.leeds.ac.uk/courses/comput
 More detail about the project can be found [here](https://lena-kilian.github.io/abm/).
 
 ### Relevant Files
-
+|-|-|
 |agent_framework.py|Contains the agent class|
 |animation.py|Contains the final model, which when run produces an animated chart of the agents' movements and environment|
 |in_example.txt|Contains the raster data for the environment|
