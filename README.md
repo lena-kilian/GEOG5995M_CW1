@@ -4,7 +4,7 @@ This model is part of an [assessment](http://www.geog.leeds.ac.uk/courses/comput
 
 More detail about the project can be found [here](https://lena-kilian.github.io/abm/).
 
-### Files
+### Relevant Files
 
 |File name|Explanation|
 |-|-|
