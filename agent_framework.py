@@ -18,7 +18,7 @@ class Agents:
         return (f"[{self.x_position}, {self.y_position}]")
         
     def moveagent(self):
-        # move agent randomly
+        # move agent randomly - equal chances of the agents x- or y-coordinate increasing, decreasing, or remaining the same. 
         if self.store <= 100:
             a = random.random()
             b = random.random()
@@ -31,6 +31,7 @@ class Agents:
             elif b >= 0.67:
                 self.y_position = (self.y_position - 1) % 299
         else:
+            # if an agent's store is higher than or equal to 100 they get to move twice per iteration
             for i in range(2):
                 a = random.random()
                 b = random.random()
@@ -51,10 +52,11 @@ class Agents:
             self.store += self.environment[self.y_position][self.x_position]
             self.environment[self.y_position][self.x_position] = 0
         if self.store >= 100:
-            ''' makes them eat it properly, rather than just store --> makes grass disappaear''' 
+            # agents with a high store eat parts of the grass properly, rather than just storing it
             self.store -= 5
         
     def regurgitate(self):
+        # if an agent's store is too high they will regurgitate some of the grass onto the raster they are on and surrounding rasters
         if self.store > 150:
             self.environment[self.y_position][self.x_position] += 26
             self.environment[self.y_position - 1][self.x_position - 1] += 3
@@ -68,6 +70,7 @@ class Agents:
             self.store -= 50
 
     def grass_grow(self):
+        # to avoid the grass from growing too quickly, a random number will deterime whether the grass grows in a given iteration
         a = random.random()
         if a <= 0.01:
             for i in range(len(self.environment)):
@@ -87,7 +90,7 @@ class Agents:
                    for j in range(i + 1, len(self.all_agents)))
     
     def max_distance(self):
-        # calculating the minimum distance between all agents
+        # calculating the maximum distance between all agents
         return max(self.all_agents[i].distance(self.all_agents[j])
                    for i in range(len(self.all_agents))
                    for j in range(i + 1, len(self.all_agents)))
