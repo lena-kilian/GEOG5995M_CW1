@@ -4,7 +4,7 @@ This model is part of an assessment for [GEOG5995](http://www.geog.leeds.ac.uk/c
 
 The code here mostly follows [these practicals](http://www.geog.leeds.ac.uk/courses/computing/study/core-python-phd/assessment1/index.html). However, some changes were made, including the way in which agents move around the environment. Changes are commented on throughout the code. 
 
-A detailed description of the code can be found [here](https://lena-kilian.github.io/abm/).
+A more detailed description of the code can be found [here](https://lena-kilian.github.io/abm/).
 
 ### Relevant Files
 |File Name|Description|
