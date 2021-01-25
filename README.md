@@ -13,10 +13,4 @@ The files must be run in the following order:
 The file in_example.txt is needed to run animation.py. 
 
 ### Relevant Files
-|File Name|Description|
-|-|-|
-|agent_framework.py|Contains the agent class|
-|animation.py|Contains the final model, which when run produces an animated chart of the agents' movements and environment|
-|in_example.txt|Contains the raster data for the environment|
-|mock_framework.py|Contains an un-randomised version of agent_framework.py, which can be used for testing|
-|test_abm.py|Contains test functions for mock_framework.py|
+
